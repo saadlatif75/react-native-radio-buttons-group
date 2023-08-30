@@ -16,7 +16,8 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
     <View style={[styles.container, { flexDirection: layout }, containerStyle]} testID={testID}>
       {radioButtons.map((button) => (
         <RadioButton
-          {...button}
+        {...button}
+          color='orange'
           key={button.id}
           selected={button.id === selectedId}
           onPress={() => handlePress(button.id)}

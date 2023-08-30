@@ -4,7 +4,6 @@ import { PixelRatio, Pressable, StyleSheet, Text, View } from 'react-native';
 import { RadioButtonProps } from './types';
 
 export default function RadioButton({
-  accessibilityLabel,
   borderColor,
   borderSize = 2,
   color = '#444',
@@ -53,7 +52,6 @@ export default function RadioButton({
           containerStyle,
         ]}
         testID={testID}
-        accessibilityLabel={accessibilityLabel}
       >
         <View
           style={[
