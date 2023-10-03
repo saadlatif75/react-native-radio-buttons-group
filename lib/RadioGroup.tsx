@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import RadioButton from './RadioButton';
 import { RadioGroupProps } from './types';
 
-export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons, selectedId, testID}: RadioGroupProps) {
+export default function RadioGroup({ containerStyle, layout = 'column', onPress, radioButtons, selectedId, testID,color="orange"}: RadioGroupProps) {
 
   function handlePress(id: string) {
     if(id !== selectedId && onPress) {
@@ -17,7 +17,7 @@ export default function RadioGroup({ containerStyle, layout = 'column', onPress,
       {radioButtons.map((button) => (
         <RadioButton
         {...button}
-          color='orange'
+          color={color}
           key={button.id}
           selected={button.id === selectedId}
           onPress={() => handlePress(button.id)}
